@@ -72,9 +72,7 @@ const useBibleVerseDetection = (initialTranslation = "WEB") => {
     setLoading(true);
     try {
       const response = await axios.get(
-        `${
-          import.meta.env.API_URL
-        }/api/v1/bible/verse?reference=${encodeURIComponent(
+        `https://versecatch-backend.onrender.com/api/v1/bible/verse?reference=${encodeURIComponent(
           verse
         )}&translation=${translation}`
       );
