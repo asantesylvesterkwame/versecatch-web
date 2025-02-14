@@ -72,13 +72,16 @@ const useBibleVerseDetection = (initialTranslation = "WEB") => {
     setLoading(true);
     try {
       const response = await axios.get(
-        `https://bible-api.com/${verse}?translation=${translation}`
+        `${
+          import.meta.env.API_URL
+        }/api/v1/bible/verse?reference=${encodeURIComponent(
+          verse
+        )}&translation=${translation}`
       );
-      const verses = response.data.verses.map((v: any) => v.text).join(" ");
-      setBibleQuote(verses);
+      setBibleQuote(response.data.verses);
     } catch (error) {
       console.error("Error fetching verse:", error);
-      setBibleQuote("Detection Limit Reached. Please try again after a while.");
+      setBibleQuote("Error fetching verse. Please try again later.");
     }
     setLoading(false);
   };
