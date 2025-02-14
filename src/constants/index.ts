@@ -1,0 +1,18 @@
+export const bibleVersionOptions = [
+  { value: "web", label: "World English Bible" },
+  { value: "kjv", label: "King James Version" },
+  { value: "asv", label: "American Standard Version" },
+  { value: "bbe", label: "Bible in Basic English" },
+  { value: "darby", label: "Darby Bible" },
+  { value: "dra", label: "Douay-Rheims 1899 American Edition" },
+  { value: "ylt", label: "Young's Literal Translation (NT only)" },
+  { value: "oeb-cw", label: "Open English Bible, Commonwealth Edition" },
+  { value: "webbe", label: "World English Bible, British Edition" },
+  { value: "oeb-us", label: "Open English Bible, US Edition" },
+  { value: "clementine", label: "Clementine Latin Vulgate" },
+  { value: "almeida", label: "João Ferreira de Almeida" },
+  { value: "rccv", label: "Protestant Romanian Corrected Cornilescu Version" },
+  { value: "cherokee", label: "Cherokee New Testament" },
+  { value: "cuv", label: "Chinese Union Version" },
+  { value: "bkr", label: "Bible kralická" },
+];
